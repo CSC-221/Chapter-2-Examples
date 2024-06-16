@@ -1,20 +1,25 @@
-// Chapter-2-Examples.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Example 3 - Extracting Digits
 //
 
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Repository for Chapter 2 Examples\n";
+	int number, digit1, digit2, digit3, digit4;
+
+	number = 6030;
+	digit1 = number % 10;  //Extract the first digit
+	number = number / 10;  //Discard the rightmost digit
+	digit2 = number % 10;  //Extract the new rightmost digit
+	number = number / 10;  //Discard the rightmost digit
+	digit3 = number % 10;  //Extract the new rightmost digit
+	number = number / 10;  //Discard the rightmost digit
+	digit4 = number;       //Last remaining digit
+
+	// Output in reverse order
+	cout << digit4 << " " << digit3 << " " << digit2 << " " << digit1 << endl;
+
+	return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
