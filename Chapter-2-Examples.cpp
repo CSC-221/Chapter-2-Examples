@@ -1,4 +1,4 @@
-// Example 3 - Extracting Digits
+// Example 3 - Extracting Digits 
 //
 
 #include <iostream>
@@ -8,7 +8,8 @@ int main()
 {
 	int number, digit1, digit2, digit3, digit4;
 
-	number = 6030;
+	cout << "Enter a 4-digit number: ";
+	cin >> number;
 	digit1 = number % 10;  //Extract the first digit
 	number = number / 10;  //Discard the rightmost digit
 	digit2 = number % 10;  //Extract the new rightmost digit
